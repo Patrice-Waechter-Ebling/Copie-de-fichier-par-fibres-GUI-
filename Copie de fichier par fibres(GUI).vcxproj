@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -108,6 +114,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
+      <UACUIAccess>true</UACUIAccess>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,6 +132,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
+      <UACUIAccess>true</UACUIAccess>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -134,14 +144,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Copie de fichier par fibres(GUI).cpp" />
+    <ClCompile Include="utilitaires.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Copie de fichier par fibres(GUI).rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="00000024.ico" />
     <Image Include="00000031.ICO" />
     <Image Include="Copie de fichier par fibres(GUI).ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\..\..\..\Windows\WindowsShell.Manifest" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

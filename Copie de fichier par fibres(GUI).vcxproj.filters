@@ -32,6 +32,9 @@
     <ClCompile Include="Copie de fichier par fibres(GUI).cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="utilitaires.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Copie de fichier par fibres(GUI).rc">
@@ -48,5 +51,11 @@
     <Image Include="00000031.ICO">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+    <Image Include="00000024.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\..\..\..\Windows\WindowsShell.Manifest" />
   </ItemGroup>
 </Project>
